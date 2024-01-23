@@ -1,69 +1,97 @@
-.slider{
-    width: 1300px;
-    max-width: 100vw;
-    height: 700px;
-    margin: auto;
-    position: relative;
-    overflow: hidden;
+#carouselExampleIndicators {
+    height: 650px;
 }
-.slider .list{
-    position: absolute;
-    width: max-content;
-    height: 100%;
-    left: 0;
-    top: 0;
-    display: flex;
-    transition: 1s;
-}
-.slider .list img{
-    width: 1300px;
-    max-width: 100vw;
-    height: 100%;
-    object-fit: cover;
-}
-.slider .buttons{
-    position: absolute;
-    top: 45%;
-    left: 5%;
-    width: 90%;
-    display: flex;
-    justify-content: space-between;
-}
-.slider .buttons button{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: #fff5;
-    color: #fff;
-    border: none;
-    font-family: monospace;
-    font-weight: bold;
-}
-.slider .dots{
-    position: absolute;
-    bottom: 10px;
-    left: 0;
-    color: #fff;
+
+#carouselExampleIndicators img {
+    height: 670px;
     width: 100%;
-    margin: 0;
-    padding: 0;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    margin-top: 20px;
+}
+
+.airjordan1 {
+    color: white;
+    margin-top: 9rem;
+    margin-left: 3rem;
+    margin-bottom: 1rem;
+}
+.bgimage1 {
+    background-image: url(../img/products/shoes/1/1_4.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.link1 {
     display: flex;
+    height: 80vh;
+    align-items: center;
     justify-content: center;
 }
-.slider .dots li{
-    list-style: none;
-    width: 10px;
-    height: 10px;
-    background-color: #fff;
-    margin: 10px;
-    border-radius: 20px;
-    transition: 0.5s;
+.button1 {
+    height: 4vh;
+    border-radius: 12px;
+    width: 70px;
+    text-decoration: none;
 }
-.slider .dots li.active{
-    width: 30px;
+.bgimage2 {
+    background-image: url(../img/products/shoes/1/1_5.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
-@media screen and (max-width: 768px){
-    .slider{
-        height: 400px;
-    }
+.bgimage3 {
+    background-image: url(../img/products/shoes/1/1_6.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
+.bgimage4 {
+    background-image: url(../img/products/shoes/1/1_7.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.balenciaga {
+    color: white;
+    margin-left: 3rem;
+    margin-bottom: 20px;
+}
+.bgimage5 {
+    background-image: url(../img/products/shoes/1/1_8.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.bgimage6 {
+    background-image: url(../img/products/shoes/1/1_9.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.bgimage7 {
+    background-image: url(../img/products/shoes/1/2_1.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.bgimage8 {
+    background-image: url(../img/products/shoes/1/2_2.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.bgimage9 {
+    background-image: url(../img/products/shoes/1/2_3.avif);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.bgimage91 {
+    background-image: url(../img/products/shoes/1/2_4.avif);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.bgimage92 {
+    background-image: url(../img/products/shoes/1/2_5.avif);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.bgimage93 {
+    background-image: url(../img/products/shoes/1/2_6.avif);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+

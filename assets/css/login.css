@@ -1,0 +1,31 @@
+.bgimage {
+    background-image: url(../img/products/shoes/1/2_7.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 50rem;
+    width: 100%;
+    background-position: center;
+}
+
+.h11111 {
+    margin-top: 14%;
+}
+
+.or-separator {
+    margin-top: 50px;
+}
+
+.or-separator p {
+    background-color: #FFF4F4;
+    position: relative;
+    /* Permet de le mettre au dessus de la ligne /
+        top: -20px;
+        / Permet de le positionner verticalement/
+        left: 50%;
+        / Permet de le centrer /
+        transform: translateX(-50%);
+        / Permet de le centrer correctement */
+    width: 50px;
+    text-align: center;
+    padding: 5px 10px;
+}

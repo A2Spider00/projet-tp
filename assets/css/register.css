@@ -1,0 +1,9 @@
+.bgimageregister {
+    background-image: url(../img/products/shoes/bgregister.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 50rem;
+    width: 100%;
+    background-position: center;
+    border-radius: 20px;
+}

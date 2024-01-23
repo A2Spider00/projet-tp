@@ -1,0 +1,24 @@
+
+    <h1 class="m-3"> Conditions générales de vente</h1>
+    <p>Pour être accepté, tout retour devra être signalé au préalable au Service Client de A2Spider.com
+        Et ce, à l'adresse suivante: A2Spider00@gmail.com </p>
+        <p class="m-4"><strong>VIII. PRIX - CONDITIONS DE PAIEMENT</strong></p>
+        <p>Les prix des produits sont affichés en euros. La TVA est incluse dans le prix affiché au taux en vigueur en France pour les produits concernés. Pour les commandes à destination de pays situés hors de l'Union Européenne, la TVA sera déduite des prix affichés. Cependant la régularisation des frais de douanes et de TVA sera, le cas échéant, demandée au Client à la livraison par les autorités compétentes du pays de livraison.</p>
+        <p class="m-4"><strong>IX. PAIMENT SECURISE</strong></p>
+        <p>Le site offre la possibilité de payer avec plusieurs moyens. Les paiements par Carte Bleue sont assurés par notre partenaire KBC via l’outil de paiement en ligne STRIPE. Nous n’avons aucun accès à vos identifiants et numéros de carte bancaire. Toutes les transactions sont sécurisées à l'aide d'un cryptage SSL, vous garantissant à la fois l'identité de l'organisme de paiement et la confidentialité des données. Les paiements par Paypal sont assurés par l’interface PayPal lui-même. C’est une solution de paiement simple et sécurisée pour accepter des paiements par carte bancaire. En utilisant PayPal comme moyen de paiement pour régler un achat, en France comme à l’étranger, si vous ne recevez pas votre objet, PayPal vous rembourse le montant total de la transaction, frais de port inclus.</p>
+        <p class="m-4"><strong>GARANTIES - SERVICES APRES VENTE</strong></p>
+        <p>Tous les Produits en vente sur le Site Internet bénéficient de la garantie légale de conformité (L211-4 du Code de la Consommation) permettant à l'Utilisateur de renvoyer les produits livrés défectueux ou non conformes. -Article L2ll-4 du Code de la Consommation : Le vendeur est tenu de livrer un bien conforme existant lors de la délivrance. Pour tout produit non conforme, il est possible de nous contacter à l'adresse suivante contact@nofacedrop.com.</p>
+        <p class="m-4"><strong>RETOURS & ECHANGES</strong></p>
+        <p>Si dans les 10 jours à compter de la date à laquelle vous avez reçu votre paquet vous n'êtes pas satisfait de votre commande, vous pouvez nous le retourner afin de l’échanger. Les produits doivent être retournés dans leur emballage, pliés le mieux possible, et dans leur état d'origine (non portés, non lavés, non parfumés, pas de poils, pas de cheveux, etc.). Ils doivent être retournés à l'adresse suivante : </p>
+        <p>5 rue du chant des oiseaux 78360 montesson</p>
+        <p>Soyez sûr d’inclure une copie de votre confirmation de commande par courriel pour accélérer le traitement de votre demande. Veuillez y joindre une lettre expliquant quels changements vous souhaitez faire, cela nous permettra d'accélérer le processus. Dès la réception du colis, nous procèderons à son remplacement.</p>
+        <p class="m-4"><strong>PROPRIETE INTELLECTUELLE</strong></p>
+        <p>Tous les éléments du Site Internet y compris la technologie sous-jacente, sont protégés par le droit d'auteur, des marques ou des brevets. De même, les marques, logos, dessins et modèles figurant sur le site web sont la propriété exclusive de la société A2Spider et ses partenaires. Ils ne peuvent donc être utilisés sous peine d’être considérés comme de la contrefaçon.</p>
+        <p class="m-4"><strong>XIII. DONNEES PERSONNELLES</strong></p>
+        <p>En communiquant des informations sur le Site Web, vous garantissez que vous utilisez votre véritable identité et que toutes les informations fournies sont vraies, précises, à jour et complètes au moment où vous nous fournissez ces informations. Le-client est informé que lors de sa navigation et dans le cadre de la Commande, des données à caractère personnel le concernant sont collectées et traitées par la société A2Spider . Ce traitement fait l'objet d'une déclaration auprès de la Commission Nationale Informatique et Libertés en application de la loi n-78-11 du 6 janvier 1978. </p>
+        <p class="m-4"><strong>LOI APPLICABLE</strong></p>
+        <p>Les Conditions sont régies par la loi française. En cas de litige seul le droit français s’applique et le tribunal compétant est celui du Tribunal de Commerce de Paris.</p>
+        <p class="m-4">Les paiements sont assurés par notre partenaire KBC via les outils Stripe (prestataire de paiement) et Shopify</p>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

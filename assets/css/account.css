@@ -1,0 +1,20 @@
+.boxshadow {
+    width: 300px; /* Largeur de la div, ajustez selon vos besoins */
+    height: 150px; /* Hauteur de la div, ajustez selon vos besoins */
+    background-color: #c6c0c0; /* Couleur de fond de la div */
+    padding: 2px; /* Espacement à l'intérieur de la div */
+    box-shadow: 5px 5px 10px #767173;
+    margin-top: 80px;
+    margin-left: 75px;
+    justify-content: center;
+    text-align: center;
+}
+.lelieninfo {
+    text-decoration: none;
+    color: black;
+    margin-bottom: 30px;
+}
+.mesinformation {
+    margin-bottom: 30px;
+    
+}

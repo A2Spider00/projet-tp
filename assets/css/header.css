@@ -1,6 +1,17 @@
 .pbarnav{
+   
+}
+.fa-solid {
     justify-items: center;
     margin: 0%;
-    margin-right: 20px;
     font-size: 20px;
+    margin-left: 57rem;
+    text-decoration: none;
+}
+.connexionn {
+    justify-items: center;
+    margin: 0%;
+    font-size: 20px;
+    margin-left: 57rem;
+    text-decoration: none;
 }

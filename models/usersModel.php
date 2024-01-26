@@ -66,7 +66,10 @@ public function getPassword()
 
     public function delete()
     {
-
+        $sql = 'DELETE FROM `H743w_users` WHERE `id` = :id';
+        $req = $this->pdo->prepare($sql);
+        $req->bindValue(':id', $this->id, PDO::PARAM_INT);
+        $req->execute();
     }
 
     public function getById()
@@ -75,7 +78,7 @@ public function getPassword()
         $req = $this->pdo->prepare($sql);
         $req->bindValue(':id', $this->id, PDO::PARAM_INT);
         $req->execute();
-        return $req->fetch(PDO::FETCH_OBJ);
+        
     }
 
     public function getList()

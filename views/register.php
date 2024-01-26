@@ -1,3 +1,4 @@
+<div class="container" >
 <div class="row">
     <div class="col-6">
 <div class="bgimageregister"></div>
@@ -13,7 +14,7 @@
         <?php } ?>
         <form action="/register" method="post">
             <div>
-                <label for="firstname">firstmail</label>
+                <label for="firstname">firstname</label>
                 <input type="firstname" name="firstname" id="firstname" placeholder="Ali" class="w-100">
                 <?php if (isset($errors['firstname'])) { ?>
                     <p>
@@ -23,7 +24,7 @@
             </div>
             <div>
                 <label for="lastname">lastname</label>
-                <input type="text" name="lastname" id="lastname" placeholder="ebrahimi">
+                <input type="text" name="lastname" id="lastname" placeholder="ebrahimi" class="w-100">
                 <?php if (isset($errors['ebrahimi'])) { ?>
                     <p>
                         <?= $errors['ebrahimi'] ?>
@@ -31,7 +32,7 @@
                 <?php } ?>
             </div>
             <label for="email">email</label>
-            <input type="email" name="email" id="email" placeholder="ali12345@gmail.com!">
+            <input type="email" name="email" id="email" placeholder="ali12345@gmail.com!" class="w-100">
             <?php if (isset($errors['email'])) { ?>
                 <p>
                     <?= $errors['email'] ?>
@@ -40,7 +41,7 @@
 
 
             <label for="password">Mot de passe</label>
-            <input type="password" name="password" id="password" placeholder="Azerty123!">
+            <input type="password" name="password" id="password" placeholder="Azerty123!" class="w-100">
             <?php if (isset($errors['password'])) { ?>
                 <p>
                     <?= $errors['password'] ?>
@@ -48,7 +49,7 @@
             <?php } ?>
 
             <label for="password_confirm">Confirmation du mot de passe</label>
-            <input type="password" name="password_confirm" id="password_confirm" placeholder="Azerty123!">
+            <input type="password" name="password_confirm" id="password_confirm" placeholder="Azerty123!" class="w-100">
             <?php if (isset($errors['password_confirm'])) { ?>
                 <p>
                     <?= $errors['password_confirm'] ?>
@@ -56,14 +57,15 @@
             <?php } ?>
 
             <label for="birthdate">Date de naissance</label>
-            <input type="date" name="birthdate" id="birthdate">
+            <input type="date" name="birthdate" id="birthdate" class="w-100">
             <?php if (isset($errors['birthdate'])) { ?>
                 <p>
                     <?= $errors['birthdate'] ?>
                 </p>
             <?php } ?>
 
-            <input type="submit" value="S'inscrire">
+            <input type="submit" value="S'inscrire" class="w-50">
         </form>
     </div>
+</div>
 </div>

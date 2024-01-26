@@ -16,8 +16,10 @@
   <!--fin de mon boostrap-->
   <!--mon css -->
   <link rel="stylesheet" href="assets/css/header.css">
+  <link rel="stylesheet" href="assets/css/account.css">
   <link rel="stylesheet" href="assets/css/pgmain.css">
   <link rel="stylesheet" href="assets/css/pg1.css">
+  <link rel="stylesheet" href="assets/css/product.css">
   <link rel="stylesheet" href="assets/css/login.css">
   <link rel="stylesheet" href="assets/css/register.css">
   <!--fin du mon css-->
@@ -39,7 +41,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Eror 404</a>
+            <a class="nav-link active" aria-current="page" href="/home">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Link</a>
@@ -57,11 +59,22 @@
               <li><a class="dropdown-item" href="#">Something else here</a></li>
             </ul>
           </li>
+          <?php
+          if (isset($_SESSION['user'])) { ?>
+            <a href="/mon-compte">
+              <i class="fa-solid fa-user fs-3 text-black "></i>
+            </a>
+            <a href="/logout">
+              <p class="pbarnav"><strong>deconexion</strong></p>
+            </a>
+          <?php } else { ?>
+            <a href="/login">
+              <p class="connexionn"><strong>connexion</strong></p>
+            </a>
+          <?php } ?>
         </ul>
-    <p class="pbarnav "><strong>decconexion</strong></p>
-        <a href="/login">
-          <i class="fa-solid fa-user fs-3 text-black "></i>
-        </a>
+
+
       </div>
     </div>
   </nav>

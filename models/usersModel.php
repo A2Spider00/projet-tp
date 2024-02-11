@@ -1,5 +1,15 @@
+<!-- j'ai créé une nouvelle classe appelée users-->
+<!-- Déclare une propriété publique $id qui représente l'identifiant de l'utilisateur-->
+<!-- Déclare une propriété private $pdo qui sera utiliser pour connexion a la base de données-->
+<!-- Déclare une propriété publique $firstname qui représente le prénom de l'utilisateur-->
+<!-- Déclare une propriété publique $lastname qui représente le nom de famille de l'utilisateur-->
+<!-- Déclare une propriété publique $birthdate qui représente la date de naissance de l'utilisateur-->
+<!-- Déclare une propriété publique $email qui représente l'adresse e-mail de l'utilisateur-->
+<!-- Déclare une propriété publique $password qui représente le mot de passe de l'utilisateur -->
+<!-- Déclare une propriété publique $id_roles qui représente le rôle de l'utilisateur -->
+
 <?php
-class Users
+class Users 
 {
     public int $id;
     private $pdo;
@@ -21,9 +31,13 @@ class Users
         }
 
     }
-    public function checkIfExistsByEmail()
+    // checkIfExistsByEmail vérifier si email existe déja dans la BD
+    // (COUNT)pour compter le nombre de fois que l'adresse e-mail apparaît dans la table
+    //  j'ai utiliser (bindvalue) pour éviter les attaques par injection SQL
+    // envoie le nombre d'occurrences de l'adresse e-mail spécifiée dans la base de données
+    public function checkIfExistsByEmail() 
     {
-        $sql = 'SELECT COUNT(`email`) FROM `H743w_users` WHERE `email` = :email';
+        $sql = 'SELECT COUNT(`email`) FROM `H743w_users` WHERE `email` = :email'; // pour compter le nombre de fois que l'adresse e-mail apparaît dans la table
         $req = $this->pdo->prepare($sql);
         $req->bindValue(':email', $this->email, PDO::PARAM_STR);
         $req->execute();
@@ -69,7 +83,7 @@ public function getPassword()
         $sql = 'DELETE FROM `H743w_users` WHERE `id` = :id';
         $req = $this->pdo->prepare($sql);
         $req->bindValue(':id', $this->id, PDO::PARAM_INT);
-        $req->execute();
+        return $req->execute();
     }
 
     public function getById()
@@ -78,7 +92,7 @@ public function getPassword()
         $req = $this->pdo->prepare($sql);
         $req->bindValue(':id', $this->id, PDO::PARAM_INT);
         $req->execute();
-        
+        return $req->fetch(PDO::PARAM_INT);
     }
 
     public function getList()
@@ -88,7 +102,14 @@ public function getPassword()
 
     public function update()
     {
-
+        $sql = 'UPDATE `H743w_users` SET `firstname` = firstname, `lastname` = lastname, `birthdate` = birthdate, `email` = email WHERE `id`=:id';
+        $req = $this->pdo->prepare($sql);
+        $req->bindValue(':firstname', $this->firstname, PDO::PARAM_STR);
+        $req->bindValue(':lastname', $this->lastname, PDO::PARAM_STR);
+        $req->bindValue(':birthdate', $this->birthdate, PDO::PARAM_STR);
+        $req->bindValue(':email', $this->email, PDO::PARAM_STR);
+        $req->bindValue(':id', $this->id, PDO::PARAM_INT);
+        return $req->execute();
     }
 
 }

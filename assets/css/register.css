@@ -3,8 +3,6 @@
     background-size: cover;
     background-repeat: no-repeat;
     height: 50rem;
-    width: 100%;
-    background-position: center;
-    
-    
+    width: 100%; 
+    background-position: center; /* centre le fonde */
 }

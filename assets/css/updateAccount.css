@@ -1,0 +1,36 @@
+.bggroundimg {
+    background-image: url(../img/deleteimg.jpg);
+    width: 100%;
+    height: 774px;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style pour la boîte contenant le formulaire */
+.box {
+    background-color: #fff;/* Couleur de fond */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(165, 48, 48, 0.1);
+    padding: 65px;
+    width: 28rem;
+    height: 20rem;
+    display: flex;
+}
+@media (max-width: 576px) {
+    .bggroundimg {
+        height: 698px;
+    }
+    .box {
+        padding: 10px;
+    }
+    .btn {
+        margin-left: 7rem;
+    }
+    .supmncompte {
+        font-size: 1.5rem;
+        margin-left: 6rem;
+        margin-top: 3rem;
+    }
+}

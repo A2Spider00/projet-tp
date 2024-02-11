@@ -3,11 +3,14 @@
 
 require_once '../models/productsModel.php';
 
-$product = new products();
-$product->name = 'test';
-$product->price = 20;
-$product->id_categories = 2;
-$productsList = $product->create();
+if($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $product = new products();
+    $product->name = $_POST['name'];
+    $product->price = $_POST['price'];
+    $product->id_categories = $_POST['id_categories'];
+    $productsList = $product->create();
+}
+
 
 
 

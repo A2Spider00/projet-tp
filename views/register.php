@@ -1,7 +1,7 @@
 <div class="container" >
 <div class="row">
     <div class="col-6">
-<div class="bgimageregister"></div>
+<div class="bgimageregister"></div> <!--pour mettre une image  de fond à gauche-->
     </div>
 
 
@@ -13,7 +13,7 @@
             </p>
         <?php } ?>
         <form action="/register" method="post">
-            <div>
+            <div> <!-- c'est pour afficher un message d'erreur associé au champ (firstname)(lastname)(email)(password)(confirmation du met de passe)(date de naissance) s'il y a des erreurs lors de la validation du formulaire Le même schéma est utilisé pour le champ de mot de passe -->
                 <label for="firstname">firstname</label>
                 <input type="firstname" name="firstname" id="firstname" placeholder="Ali" class="w-100">
                 <?php if (isset($errors['firstname'])) { ?>

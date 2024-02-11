@@ -18,3 +18,7 @@
     margin-bottom: 30px;
     
 }
+
+#modalContainer {
+    display: none;
+}

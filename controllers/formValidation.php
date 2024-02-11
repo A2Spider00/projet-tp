@@ -49,3 +49,50 @@ define('USERS_PASSWORD_CONFIRM_ERROR_EMPTY', 'La confirmation du mot de passe es
 
 define('USERS_BIRTHDATE_ERROR_EMPTY', 'La date de naissance est requise');
 define('USERS_BIRTHDATE_ERROR_INVALID', 'La date de naissance est invalide. Elle doit être au format YYYY-MM-DD');
+
+define('USERS_LOGIN_ERROR', 'Votre adresse mail ou votre mot de passe est incorrect');
+
+define('USERS_UPDATE_SUCCESS', 'Votre compte a bien été mis à jour');
+define('USERS_UPDATE_ERROR', 'Une erreur est survenue lors de la mise à jour de votre compte');
+
+define('USERS_PASSWORD_UPDATE_SUCCESS', 'Votre mot de passe a bien été mis à jour');
+define('USERS_PASSWORD_UPDATE_ERROR', 'Une erreur est survenue lors de la mise à jour de votre mot de passe');
+
+define('USERS_ADD_SUCCESS', 'Votre compte a bien été créé');
+define('USERS_ADD_ERROR', 'Une erreur est survenue lors de la création de votre compte');
+
+
+// ARTICLES
+// Title
+define('ARTICLE_TITLE_ERROR_EMPTY', 'Le titre est requis');
+define('ARTICLE_TITLE_ERROR_INVALID', 'Le titre est invalide. Il ne peut contenir que des lettres, des chiffres, des espaces, des tirets et des apostrophes');
+
+// Content
+define('ARTICLE_CONTENT_ERROR_EMPTY', 'Le contenu est requis');
+define('ARTICLE_CONTENT_ERROR_INVALID', 'Le contenu est invalide. Il ne peut pas contenir de balises script.');
+
+// Categories
+define('ARTICLE_CATEGORIES_ERROR_EMPTY', 'La catégorie est requise');
+define('ARTICLE_CATEGORIES_ERROR_INVALID', 'La catégorie est invalide');
+
+// Image
+define('ARTICLE_IMAGE_ERROR_EMPTY', 'L\'image est requise');
+define('ARTICLE_IMAGE_ERROR_INVALID', 'L\'image est invalide');
+define('ARTICLE_IMAGE_ERROR_EXTENSION', 'L\'image est invalide. Elle doit être au format jpg, jpeg, png, gif ou webp');
+define('ARTICLE_IMAGE_ERROR_SIZE', 'L\'image est invalide. Elle doit faire moins de 1Mo');
+define('ARTICLE_IMAGE_ERROR', 'Une erreur est survenue lors de l\'envoi de l\'image');
+
+//Form
+define('ARTICLE_ADD_SUCCESS', 'L\'article a bien été ajouté');
+define('ARTICLE_ADD_ERROR', 'Une erreur est survenue lors de l\'ajout de l\'article');
+
+// COMMENTS
+// Content
+define('COMMENT_CONTENT_ERROR_EMPTY', 'Le contenu est requis');
+define('COMMENT_CONTENT_ERROR_INVALID', 'Le contenu est invalide. Il ne peut pas contenir de balises script.');
+
+// Form
+define('COMMENT_ADD_SUCCESS', 'Le commentaire a bien été ajouté');
+define('COMMENT_ADD_ERROR', 'Une erreur est survenue lors de l\'ajout du commentaire');
+
+

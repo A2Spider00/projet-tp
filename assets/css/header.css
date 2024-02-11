@@ -1,17 +1,7 @@
-.pbarnav{
-   
+
+.logonav {
+    width: 190px; /*  la largeur */
+    height: auto; /* hauteur de élément */
 }
-.fa-solid {
-    justify-items: center;
-    margin: 0%;
-    font-size: 20px;
-    margin-left: 57rem;
-    text-decoration: none;
-}
-.connexionn {
-    justify-items: center;
-    margin: 0%;
-    font-size: 20px;
-    margin-left: 57rem;
-    text-decoration: none;
-}
+
+

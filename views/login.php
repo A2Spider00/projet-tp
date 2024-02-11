@@ -1,8 +1,8 @@
 <!--background image-->
 <div class="container">
-    <div class="row">
+    <div class="row"> <!--C'est une ligne qui contient les colonnes du formulaire-->
         <div class="col">
-            <div class="bgimage"></div>
+            <div class="bgimage"></div> <!-- pour background image -->
         </div>
         <div class="col">
             <h1 class="h11111 text-white text-center"><strong>VOUS AVEZ DEJA UN COMPTE</strong></h1>
@@ -11,6 +11,7 @@
                     <label class="text-white mt-4" for="email"><strong>Adresse mail</strong></label>
                 </div>
                 <div>
+                    <!--c'est pour afficher un message d'erreur associé au champ d'e-mail s'il y a des erreurs lors de la validation du formulaire Le même schéma est utilisé pour le champ de mot de passe -->
                     <input type="email" name="email" id="email" placeholder="jean.dupont@mail.fr" class="w-100"
                         value="<?= @$_COOKIE['email'] ?>">
                     <?php if (isset($errors['email'])) { ?>
@@ -34,12 +35,13 @@
                 <div class="text-white">
                     <input type="checkbox" name="remember" id="remember"><label class="mt-2" for="remember">Se souvenir de moi</label>
                 </div>
+                <!--un bouton de soumission du formulaire avec le texte "Se connecter"-->
                 <input type="submit" class="seconnecter " value="Se connecter">
             </form>
-            <div class="or-separator">
-            </div>
-            <a href="/register">
-    <button class="buttoncree"><strong>cree un compte</strong></button>
+            <!--j'ai utilisé pour séparer visuellement le formulaire de connexion des autres éléments de la page-->
+            <div class="or-separator"></div>
+            <a href="/register"> <!-- le lien vers la page d'inscription-->
+    <button class="buttoncree"><strong>cree un compte</strong></button> <!-- un bouton avec le texte (créer un compte)-->
 </a>
         </div>
     </div>

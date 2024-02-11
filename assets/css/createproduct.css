@@ -1,0 +1,14 @@
+.bgproducts {
+    background-image: url(../);
+}
+.shadowcreate{
+    width: 25rem;
+    height: 40rem;
+    text-align: center;
+    background-color: #555761; /* Couleur de fond de l'élément */
+    margin-left: 35rem;
+    margin-top: 3rem;
+    border-radius: 10px; /* Facultatif : ajoutez une bordure arrondie */
+    box-shadow: 5px 5px 10px rgba(255, 10, 10, 0.3);
+    /* Position horizontale, Position verticale, Flou, Couleur de l'ombre */
+  }

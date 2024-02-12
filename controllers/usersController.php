@@ -52,25 +52,6 @@ if(isset($_POST['updateInfos'])) {
         $errors['email'] = USERS_EMAIL_ERROR_EMPTY;
     }
     
-    
-    if (!empty($_POST['password'])) {
-        if (preg_match($regex['password'], $_POST['password'])) {
-            if (!empty($_POST['password_confirm'])) {
-                if ($_POST['password'] == $_POST['password_confirm']) {
-                    $user->password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-                } else {
-                    $errors['password_confirm'] = USERS_PASSWORD_CONFIRM_ERROR_INVALID;
-                }
-            } else {
-                $errors['password_confirm'] = USERS_PASSWORD_CONFIRM_ERROR_EMPTY;
-            }
-        } else {
-            $errors['password'] = USERS_PASSWORD_ERROR_INVALID;
-        }
-    } else {
-        $errors['password'] = USERS_PASSWORD_ERROR_EMPTY;
-    }
-    
     if (!empty($_POST['birthdate'])) {
         if (preg_match($regex['date'], $_POST['birthdate'])) {
             if (checkDateValidity($_POST['birthdate'])) {
@@ -86,14 +67,16 @@ if(isset($_POST['updateInfos'])) {
     }
     if(empty($errors)) {
         if($user->update()){
-            $_SESSION['user']['username'] = $user->firstname;
-            $_SESSION['user']['username'] = $user->lastname;
-            $_SESSION['user']['username'] = $user->birthdate;
+            $_SESSION['user']['id'] = $user->id;
+            $_SESSION['user']['firstname'] = $user->firstname;
+            $_SESSION['user']['lastname'] = $user->lastname;
+            $_SESSION['user']['birthdate'] = $user->birthdate;
             $_SESSION['user']['email'] = $user->email;
-            $_SESSION['user']['username'] = $user->password;
             $success = USERS_UPDATE_SUCCESS;
+            header('Location: /mon-compte');
         } else {
             $errors['updateAccount'] = USERS_UPDATE_ERROR;
+            
         }
     }
 }

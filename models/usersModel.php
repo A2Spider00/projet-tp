@@ -102,7 +102,7 @@ public function getPassword()
 
     public function update()
     {
-        $sql = 'UPDATE `H743w_users` SET `firstname` = firstname, `lastname` = lastname, `birthdate` = birthdate, `email` = email WHERE `id`=:id';
+        $sql = 'UPDATE `H743w_users` SET `firstname` = :firstname, `lastname` = :lastname, `birthdate` = :birthdate, `email` = :email WHERE `id`=:id';
         $req = $this->pdo->prepare($sql);
         $req->bindValue(':firstname', $this->firstname, PDO::PARAM_STR);
         $req->bindValue(':lastname', $this->lastname, PDO::PARAM_STR);
@@ -111,5 +111,4 @@ public function getPassword()
         $req->bindValue(':id', $this->id, PDO::PARAM_INT);
         return $req->execute();
     }
-
 }

@@ -1,34 +1,77 @@
 .bgimage {
-    background-image: url(../img/products/shoes/1/2_7.jpeg); /*lien de mon background*/
-    background-size: contain; /*  l'image de fond est contenue dans la zone définie par l'élément*/
-    background-repeat: no-repeat; /* l'image de fond ne doit pas se répéter */
-    height: 50rem; /*  la hauteur de l'élément */
-    width: 100%; /*  largeur de l'élément */
+    background-image: url(../img/products/shoes/1/2_7.jpeg);
+    /*lien de mon background*/
+    background-size: contain;
+    /*  l'image de fond est contenue dans la zone définie par l'élément*/
+    background-repeat: no-repeat;
+    /* l'image de fond ne doit pas se répéter */
+    height: 50rem;
+    /*  la hauteur de l'élément */
+    width: 100%;
+    /*  largeur de l'élément */
     background-position: center;
+    
 }
 
 .h11111 {
-    margin-top: 14%; /* la marge supérieure de l'élément à 14%*/
+    margin-top: 14%;
+    /* la marge supérieure de l'élément à 14%*/
 }
 
 .or-separator {
-    margin-top: 50px; /* la marge supérieure de l'élément à 50px */
-}
-/* balise p a l'intérieur de or- separator */
-.or-separator p {
-    background-color: #FFF4F4; /*fonde blanc*/
-    position: relative; /*pour mettre les balises (p) relative à leur position normale dans le flux du document*/
-    width: 50px; /*  largeur de l'élément */
-    text-align: center; /*pour mettre le text au centre*/
-    padding: 5px 10px; /* un espace interne de 5pixel en haut et en bas et 10 pixel à gauche et a droite à l'intérieur des éléments */
-}
-.seconnecter {
-    margin-left: 16rem; /* la marge gauche de l'élément à 16 rem */
-    margin-top: 2rem;  /*  la marge supérieure de l'élément à 2 rem*/
-    border-radius: 10px; /* Arrondit les coins de l'élément 10 pixels */
-}
-.buttoncree {
-    margin-left: 248px; /* la marge gauche de 248 pixels */
-    border-radius: 10px; /* Arrondit les coins de l'élément 10 pixels */
+    margin-top: 50px;
+    /* la marge supérieure de l'élément à 50px */
 }
 
+/* balise p a l'intérieur de or- separator */
+.or-separator p {
+    background-color: #FFF4F4;
+    /*fonde blanc*/
+    position: relative;
+    /*pour mettre les balises (p) relative à leur position normale dans le flux du document*/
+    width: 50px;
+    /*  largeur de l'élément */
+    text-align: center;
+    /*pour mettre le text au centre*/
+    padding: 5px 10px;
+    /* un espace interne de 5pixel en haut et en bas et 10 pixel à gauche et a droite à l'intérieur des éléments */
+}
+
+.seconnecter {
+    margin-left: 16rem;
+    /* la marge gauche de l'élément à 16 rem */
+    margin-top: 2rem;
+    /*  la marge supérieure de l'élément à 2 rem*/
+    border-radius: 10px;
+    /* Arrondit les coins de l'élément 10 pixels */
+}
+
+.buttoncree {
+    margin-left: 248px;
+    /* la marge gauche de 248 pixels */
+    border-radius: 10px;
+    /* Arrondit les coins de l'élément 10 pixels */
+}
+
+@media screen and (max-width: 768px) {
+    .bgimage {
+        background-image: none;
+    }
+
+    
+    .h11111 {
+        margin-top: 10%;
+    }
+
+    .or-separator {
+        margin-top: 30px;
+    }
+
+    .seconnecter {
+        margin-left: 1rem;
+    }
+
+    .buttoncree {
+        margin-left: 1rem;
+    }
+}

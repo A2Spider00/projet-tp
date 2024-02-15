@@ -22,12 +22,6 @@ function checkDateValidity($date) {
     return checkdate($dateArray[1], $dateArray[2], $dateArray[0]);
 }
 
-// REGEX
-$regex = [
-    'name' => '/^[A-zÄ-ÿ]{1,}([ \'-]{1}[A-zÄ-ÿ]{1,}){0,}$/',
-    'date' => '/^[0-9]{4}(-[0-9]{2}){2}$/',
-    'password' => '/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).{8,}$/',
-];
 
 // MESSAGES D'ERREUR
 define('USERS_firstname_ERROR_EMPTY', 'Le prenom d\'utilisateur est requis');
@@ -62,37 +56,31 @@ define('USERS_ADD_SUCCESS', 'Votre compte a bien été créé');
 define('USERS_ADD_ERROR', 'Une erreur est survenue lors de la création de votre compte');
 
 
-// ARTICLES
-// Title
-define('ARTICLE_TITLE_ERROR_EMPTY', 'Le titre est requis');
-define('ARTICLE_TITLE_ERROR_INVALID', 'Le titre est invalide. Il ne peut contenir que des lettres, des chiffres, des espaces, des tirets et des apostrophes');
+// PRODUCTS
 
-// Content
-define('ARTICLE_CONTENT_ERROR_EMPTY', 'Le contenu est requis');
-define('ARTICLE_CONTENT_ERROR_INVALID', 'Le contenu est invalide. Il ne peut pas contenir de balises script.');
+define('PRODUCTS_NAME_ERROR_INVALID', 'Le nom du produit est invalide. Il ne peut contenir que des lettres, des apostrophes et des espaces.');
+define('PRODUCTS_NAME_ERROR_EMPTY', 'Le nom du produit est requise.');
 
-// Categories
-define('ARTICLE_CATEGORIES_ERROR_EMPTY', 'La catégorie est requise');
-define('ARTICLE_CATEGORIES_ERROR_INVALID', 'La catégorie est invalide');
+//PRODUCTS PRICE
+define('PRODUCTS_PRICE_ERROR_INVALID', 'Le prix du produit est invalide. Il ne peut contenir des lettres, des apostrophes et des espaces.');
+define('PRODUCTS_PRICE_ERROR_EMPTY', 'Le prix du produit est requise.');
 
-// Image
-define('ARTICLE_IMAGE_ERROR_EMPTY', 'L\'image est requise');
-define('ARTICLE_IMAGE_ERROR_INVALID', 'L\'image est invalide');
-define('ARTICLE_IMAGE_ERROR_EXTENSION', 'L\'image est invalide. Elle doit être au format jpg, jpeg, png, gif ou webp');
-define('ARTICLE_IMAGE_ERROR_SIZE', 'L\'image est invalide. Elle doit faire moins de 1Mo');
-define('ARTICLE_IMAGE_ERROR', 'Une erreur est survenue lors de l\'envoi de l\'image');
+//PRODUCTS CATEGORIES
+define('PRODUCTS_categories_ERROR_INVALID', 'La categorie du produit est invalide. Il ne peut contenir des lettres, des apostrophes et des espaces.');
+define('PRODUCTS_categories_ERROR_EMPTY', 'La categorie du produit est requise.');
 
-//Form
-define('ARTICLE_ADD_SUCCESS', 'L\'article a bien été ajouté');
-define('ARTICLE_ADD_ERROR', 'Une erreur est survenue lors de l\'ajout de l\'article');
+//PRODUCTS BRANDS
+define('PRODUCTS_BRANDS_ERROR_INVALID','La brands du produit est invalide');
+define('PRODUCTS_BRANDS_ERROR_EMPTY','La brands du produit est requise');
 
-// COMMENTS
-// Content
-define('COMMENT_CONTENT_ERROR_EMPTY', 'Le contenu est requis');
-define('COMMENT_CONTENT_ERROR_INVALID', 'Le contenu est invalide. Il ne peut pas contenir de balises script.');
-
-// Form
-define('COMMENT_ADD_SUCCESS', 'Le commentaire a bien été ajouté');
-define('COMMENT_ADD_ERROR', 'Une erreur est survenue lors de l\'ajout du commentaire');
-
-
+// REGEX
+$regex = [
+    'name' => '/^[A-zÄ-ÿ]{1,}([ \'-]{1}[A-zÄ-ÿ]{1,}){0,}$/',
+    'date' => '/^[0-9]{4}(-[0-9]{2}){2}$/',
+    'password' => '/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).{8,}$/',
+    'title' => '/^[A-zÄ-ÿ0-9]{1,}[ \-\',A-zÄ-ÿ0-9\?\!\:\/]{1,}$/',
+    'content' => '/(<script>|(&lt;script&gt;))/',
+    'productsName' => '/^[A-Za-z0-9 Ä-ÿ]{1,50}$/',
+    'price' => '/^\$?\d+$/',
+    'productsCategorie' => '/^(chaussure|vêtements)$/'
+];

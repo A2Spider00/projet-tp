@@ -111,4 +111,16 @@ public function getPassword()
         $req->bindValue(':id', $this->id, PDO::PARAM_INT);
         return $req->execute();
     }
+
+
+public function updatePassword()
+{
+    $sql = 'UPDATE `H743w_users` SET password = :password WHERE id = :id';
+    $req = $this->pdo->prepare($sql);
+    $req->bindValue(':password', $this->password, PDO::PARAM_STR);
+    $req->bindValue(':id', $this->id, PDO::PARAM_INT);
+    return $req->execute();
+
+}
+
 }

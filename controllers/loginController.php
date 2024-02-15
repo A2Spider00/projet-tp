@@ -1,7 +1,7 @@
 <?php 
 
 require_once '../models/usersModel.php';
-require_once 'formValidation.php';
+require_once 'formValidationController.php';
 
 session_start();
 // Je vérifie si la personne est connectée. Si oui, je la redirige vers la page mon-compte

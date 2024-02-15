@@ -1,6 +1,30 @@
 <?php 
 
-//Code
+require_once '../models/productsModel.php';
+
+$product = new Products;
+$productsList = $product->getList();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //Toujours à la fin
 require_once '../views/parts/header.php';

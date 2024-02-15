@@ -1,6 +1,6 @@
 <?php
 require_once '../models/usersModel.php';
-require_once 'formValidation.php';
+require_once 'formValidationController.php';
 
 session_start();
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {

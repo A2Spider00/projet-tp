@@ -43,11 +43,16 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/home">Home</a>
+                    <a class="nav-link active" aria-current="page" href="/home">Accueil</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="#">Liens</a>
                 </li>
+                <?php if (isset($_SESSION['user']) && $_SESSION['user']['id_roles'] == 535) { ?>
+                    <a href="/home" class="ajtdesproducts" >
+                    <li>Ajouter des products</li>
+                </a>
+                    <?php }?>
                 <li class="nav-item">
                     <a href="/panier" class="nav-link">
                         <i class="fas fa-cart-shopping fs-2 custom-icon"></i>

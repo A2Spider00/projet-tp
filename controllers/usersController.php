@@ -1,6 +1,6 @@
 <?php
 require_once '../models/usersModel.php';
-require_once '../controllers/formValidation.php';
+require_once '../controllers/formValidationController.php';
 
 
 // Démarrage de la session
@@ -76,9 +76,11 @@ if(isset($_POST['updateInfos'])) {
             header('Location: /mon-compte');
         } else {
             $errors['updateAccount'] = USERS_UPDATE_ERROR;
-            
+            header('Location: /mon-compte');
         }
     }
+
+    header('Location: /mon-compte');
 }
 
 

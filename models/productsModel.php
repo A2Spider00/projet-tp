@@ -67,8 +67,8 @@ public function updateProducts () {
     $req = $this->pdo->prepare($sql);
     $req->bindValue(':name', $this->name, PDO::PARAM_STR);
     $req->bindValue(':price', $this->price, PDO::PARAM_INT);
-    $req->bindValue(':categories', $this->id_categories, PDO::PARAM_INT);
-    $req->bindValue(':brands', $this->id_brands, PDO::PARAM_INT);
+    $req->bindValue(':id_categories', $this->id_categories, PDO::PARAM_INT);
+    $req->bindValue(':id_brands', $this->id_brands, PDO::PARAM_INT);
     $req->bindValue(':id', $this->id, PDO::PARAM_INT);
     return $req->execute();
 
@@ -76,7 +76,7 @@ public function updateProducts () {
 
 public function deleteProducts()
 {
-    $sql =  'DELETE FROM H743w_products WHERE id = :id';
+    $sql = 'DELETE FROM H743w_products WHERE id = :id';
     $req = $this->pdo->prepare($sql);
     $req->bindValue(':id', $this->id, PDO::PARAM_INT);
     return $req->execute();

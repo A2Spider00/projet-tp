@@ -1,3 +1,3 @@
-<h1><?php echo $productDetails->name; ?></h1>
+<h1 class="text-white"> <?php echo $productDetails->name; ?></h1>
 
-<p><?php echo $productDetails->price; ?></p>
+<p class="text-white"><?php echo $productDetails->price; ?></p>

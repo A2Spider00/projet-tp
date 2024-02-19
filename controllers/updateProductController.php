@@ -11,9 +11,13 @@ if (!isset($_SESSION['user'])) {
     header('Location: /connexion');
     exit;
 }
+$categories = new categories;
+$categoriesList = $categories->getList();
+
+$brands = new brands;
+$brandsList = $brands->getList();
 
 $product = new Products();
-$productDetails = $product->getProductById();
 if (isset($_GET['id'])) {
     $product->id = (int) $_GET['id'];
 
@@ -23,6 +27,16 @@ if (isset($_GET['id'])) {
     }
 
 }
+
+if (isset($_POST['deleteProducts'])) {
+    if ($product->deleteProducts()) {
+        header('Location: /productsList');
+        exit;
+    } else {
+        echo "Erreur lors de la suppression du produit.";
+    }
+}
+
 
 $errors = [];
 
@@ -80,9 +94,9 @@ if (!empty($_POST['brands'])) {
 
 
 if (empty($errors)) {
-    $productDetails->create();
+    $product->updateProducts();
 }
-
+$productDetails = $product->getProductById();
 
 require_once '../views/parts/header.php';
 require_once '../views/updateProduct.php';

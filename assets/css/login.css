@@ -18,10 +18,7 @@
     /* la marge supérieure de l'élément à 14%*/
 }
 
-.or-separator {
-    margin-top: 50px;
-    /* la marge supérieure de l'élément à 50px */
-}
+
 
 /* balise p a l'intérieur de or- separator */
 .or-separator p {
@@ -37,18 +34,3 @@
     /* un espace interne de 5pixel en haut et en bas et 10 pixel à gauche et a droite à l'intérieur des éléments */
 }
 
-.seconnecter {
-    margin-left: 16rem;
-    /* la marge gauche de l'élément à 16 rem */
-    margin-top: 2rem;
-    /*  la marge supérieure de l'élément à 2 rem*/
-    border-radius: 10px;
-    /* Arrondit les coins de l'élément 10 pixels */
-}
-
-.buttoncree {
-    margin-left: 248px;
-    /* la marge gauche de 248 pixels */
-    border-radius: 10px;
-    /* Arrondit les coins de l'élément 10 pixels */
-}

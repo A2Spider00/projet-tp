@@ -52,9 +52,9 @@
 <div class="text-white text-center mt-3">
             <label for="password_confirm">Confirmation du mot de passe</label>
             <input type="password" name="password_confirm" id="password_confirm" placeholder="Azerty123!" class="w-100">
-            <?php if (isset($errors['password_confirm'])) { ?>
+            <?php if (isset($errors['password'])) { ?>
                 <p class="text-danger">
-                    <?= $errors['password_confirm'] ?>
+                    <?= $errors['password'] ?>
                 </p>
             <?php } ?>
 </div>

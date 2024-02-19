@@ -27,23 +27,25 @@
                     <input type="password" name="password" id="password" placeholder="Azerty123!" class="w-100"
                         value="<?= @$_COOKIE['password'] ?>">
                     <?php if (isset($errors['password'])) { ?>
-                        <p class="errorsMessage text-danger">
+                        <p class="errorsMessage text-danger ">
                             <?= $errors['password'] ?>
                         </p>
                     <?php } ?>
                 </div>
-                <div class="text-white">
+                <div class="text-white ">
                     <input type="checkbox" name="remember" id="remember"><label class="mt-2" for="remember">Se souvenir de moi</label>
                 </div>
                 <!--un bouton de soumission du formulaire avec le texte "Se connecter"-->
-                <input type="submit" class="seconnecter " value="Se connecter">
+                <div class="d-flex justify-content-center align-items-center">
+                    <input type="submit" class="seconnecter mt-3" value="Se connecter">
+                </div>
             </form>
             <!--j'ai utilisé pour séparer visuellement le formulaire de connexion des autres éléments de la page-->
-            <div class="or-separator"></div>
-            <a href="/inscription"> <!-- le lien vers la page d'inscription-->
-    <button class="buttoncree"><strong>cree un compte</strong></button> <!-- un bouton avec le texte (créer un compte)-->
-</a>
+            <div class="or-separator mt-3 "></div>
+            <a href="/inscription "> <!-- le lien vers la page d'inscription-->
+                <button class="buttoncree "><strong>cree un compte</strong></button>
+                <!-- un bouton avec le texte (créer un compte)-->
+            </a>
         </div>
     </div>
 </div>
-

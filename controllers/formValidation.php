@@ -73,6 +73,13 @@ define('PRODUCTS_categories_ERROR_EMPTY', 'La categorie du produit est requise.'
 define('PRODUCTS_BRANDS_ERROR_INVALID','La brands du produit est invalide');
 define('PRODUCTS_BRANDS_ERROR_EMPTY','La brands du produit est requise');
 
+//PRODUCTS UPDATE
+
+define('PRODUCT_NAME_ERROR_INVALID','Le nom du produit est invalide');
+define('PRODUCT_NAME_ERROR_EMPTY','Le nom du produit est requise');
+define('PRODUCT_PRICE_ERROR_INVALID','Le prix du produit est invalide');
+define('PRODUCT_PRICE_ERROR_EMPTY','Le prix du produit est requise');
+
 // REGEX
 $regex = [
     'name' => '/^[A-zÄ-ÿ]{1,}([ \'-]{1}[A-zÄ-ÿ]{1,}){0,}$/',

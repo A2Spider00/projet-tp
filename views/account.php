@@ -2,14 +2,12 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-6 col-sm-12">
-                <div class="boxshadow">
+                <div class="boxshadow w-75">
                     <p class="fs-5"><strong>MON COMPTE</strong></p>
-                    <a href="/mon-compte" class="lelieninfo">
-                        <p class="mesinformation"><strong>Mes information personnelles</strong></p>
-                    </a>
-                    <a href="/users">
-                        <p class="mesinformation"><strong>Supprimer votre compte</strong></p>
-                    </a>
+                    <form action="/mon-compte" method="POST">
+                        <input type="submit" name="deleteAccount" value="Supprimer">
+                    </form>
+            
                 </div>
             </div>
             <div class="col-lg-6 col-sm-12 text-center mt-5">
@@ -26,10 +24,10 @@
                 <?php } ?>
                 <div class="formContainer text-white">
                     <div class="mt-3">
-                        <form action="/users" method="POST">
+                        <form action="/mon-compte" method="POST">
                             <label for="firstname">prénom:</label><br>
-                            <input type="text" id="firstname" name="firstname" required
-                                placeholder="<?= $userAccount->firstname ?>">
+                            <input type="text" id="firstname" name="firstname"
+                                placeholder="<?= $userAccount->firstname ?>" value="<?= $userAccount->firstname ?>">
                             <?php if (isset($errors['firstname'])) { ?>
                                 <p>
                                     <?= $errors['firstname'] ?>
@@ -38,8 +36,7 @@
                     </div>
                     <div class="mt-2">
                         <label for="lastname">Nom de famille:</label><br>
-                        <input type="text" id="lastname" name="lastname" required
-                            placeholder="<?= $userAccount->lastname ?>">
+                        <input type="text" id="lastname" name="lastname" placeholder="<?= $userAccount->lastname ?>" value="<?= $userAccount->lastname ?>">
                         <?php if (isset($errors['lastname'])) { ?>
                             <p>
                                 <?= $errors['lastname'] ?>
@@ -48,7 +45,7 @@
                     </div>
                     <div class="mt-2">
                         <label for="email">Email:</label><br>
-                        <input type="email" id="email" name="email" required placeholder="<?= $userAccount->email ?>">
+                        <input type="email" id="email" name="email" placeholder="<?= $userAccount->email ?>" value="<?= $userAccount->email ?>">
                         <?php if (isset($errors['email'])) { ?>
                             <p>
                                 <?= $errors['email'] ?>
@@ -57,8 +54,7 @@
                     </div>
                     <div class="mt-2">
                         <label for="birthdate">Date de naissance:</label><br>
-                        <input type="date" id="birthdate" name="birthdate" required
-                            placeholder="<?= $userAccount->birthdate ?>">
+                        <input type="date" id="birthdate" name="birthdate" placeholder="<?= $userAccount->birthdate ?>" value="<?= $userAccount->birthdate ?>">
                         <?php if (isset($errors['birthdate'])) { ?>
                             <p>
                                 <?= $errors['birthdate'] ?>
@@ -79,27 +75,34 @@
                 <?php } ?>
 
                 <div class="formContainer">
-
                     <form action="/mon-compte" method="POST">
-                        <h2 class="text-white mt-4">Modifier mon mot de passe</h2>
-                            <label for="password">Mot de passe</label>
-                            <input type="password" name="password" id="password" placeholder="Azerty123!">
-                            <?php if (isset($errors['password'])) { ?>
-                                <p>
-                                    <?= $errors['password'] ?>
-                                </p>
-                            <?php } ?>
+                        <br>
+                        <br>
+                        <h2 class="text-white">Modifier mon mot de passe</h2>
 
-                            <label for="password_confirm">Confirmation du mot de passe</label>
-                            <input type="password" name="password_confirm" id="password_confirm"
-                                placeholder="Azerty123!">
-                            <?php if (isset($errors['password_confirm'])) { ?>
-                                <p>
-                                    <?= $errors['password_confirm'] ?>
-                                </p>
-                            <?php } ?>
-                      
-                            <input type="submit" value="Modifier" name="updatePassword">
+                        <label for="password" class="text-white" >Mot de passe</label>
+                        <br>
+                        <input type="password"  name="password" id="password">
+
+                        <br>
+                        <?php if (isset($errors['password'])) { ?>
+                            <br>
+                            <p>
+                                <?= $errors['password'] ?>
+                            </p>
+                            <br>
+                        <?php } ?>
+
+                        <label for="password_confirm" class="text-white mt-1" >Confirmation du mot de passe</label>
+                        <br>
+                        <input type="password" name="password_confirm" id="password_confirm">
+                        <?php if (isset($errors['password_confirm'])) { ?>
+                            <p>
+                                <?= $errors['password_confirm'] ?>
+                            </p>
+                        <?php } ?>
+                        <br><br>
+                        <input type="submit" value="Modifier" name="updatePassword">
                     </form>
                 </div>
             </div>

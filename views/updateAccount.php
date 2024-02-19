@@ -19,7 +19,7 @@
                         <div class="modal-body">
                             <p id="modalText">Êtes-vous sûr de vouloir supprimer votre compte ?</p>
                         </div>
-                        <form action="/users" method="POST">
+                        <form action="/quitter" method="POST">
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
                                 <button type="submit" value="Supprimer" name="deleteAccount"

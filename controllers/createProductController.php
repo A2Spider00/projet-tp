@@ -1,9 +1,16 @@
 <?php
 
 require_once '../models/productsModel.php';
-require_once 'formValidationController.php';
+require_once 'formValidation.php';
 require_once '../models/categoriesModel.php';
 require_once '../models/brandsModel.php';
+
+session_start();
+
+if(empty($_SESSION['user']) || $_SESSION['user']['id_roles'] != 535){
+    header('Location: /connexion');
+    exit;
+}
 
 $categories = new categories;
 $categoriesList = $categories->getList();
@@ -53,7 +60,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
 
-
     if (!empty($_POST['brands'])) {
         $brands->id = $_POST['brands'];
 
@@ -74,30 +80,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (empty($errors)) {
         $product->create();
     }
-
-
-
-
-
-
-
 }
-
-
-
-
-
-
-$prod = new products;
-$prodList = $prod->getList();
-
-
-var_dump($_POST);
-
-
-
-
-
 
 require_once '../views/parts/header.php';
 require_once '../views/createProduct.php';

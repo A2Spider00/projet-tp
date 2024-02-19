@@ -1,6 +1,6 @@
 <?php
 require_once '../models/usersModel.php';
-require_once 'formValidationController.php';
+require_once 'formValidation.php';
 
 session_start();
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -80,13 +80,6 @@ if (empty($errors)) {
     }
 }
 }
-
-
-
-
-
-
-
 
 require_once '../views/parts/header.php';
 require_once '../views/register.php';

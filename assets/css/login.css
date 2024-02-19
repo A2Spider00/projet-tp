@@ -52,26 +52,3 @@
     border-radius: 10px;
     /* Arrondit les coins de l'élément 10 pixels */
 }
-
-@media screen and (max-width: 768px) {
-    .bgimage {
-        background-image: none;
-    }
-
-    
-    .h11111 {
-        margin-top: 10%;
-    }
-
-    .or-separator {
-        margin-top: 30px;
-    }
-
-    .seconnecter {
-        margin-left: 1rem;
-    }
-
-    .buttoncree {
-        margin-left: 1rem;
-    }
-}

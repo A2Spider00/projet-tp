@@ -32,7 +32,10 @@ public function create()
 }
 
 public function getList(){
-    $sql = 'SELECT id,name,price,id_categories FROM `H743w_products`';
+    $sql = 'SELECT `p`.`id`,`p`.name, price,id_categories, `c`.`name` AS `category`, `b`.`name` AS `brand`
+    FROM `H743w_products` AS `p`
+    INNER JOIN `H743w_categories` AS `c` ON `c`.`id` = `p`. `id_categories`
+    INNER JOIN `H743w_brands` AS `b` ON `b`.`id` = `p`.`id_brands`';
     $req = $this->pdo->query($sql);
     return $req->fetchAll(PDO::FETCH_OBJ);
 }

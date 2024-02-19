@@ -15,7 +15,7 @@
                     <input type="email" name="email" id="email" placeholder="jean.dupont@mail.fr" class="w-100"
                         value="<?= @$_COOKIE['email'] ?>">
                     <?php if (isset($errors['email'])) { ?>
-                        <p class="errorsMessage">
+                        <p class="errorsMessage text-danger">
                             <?= $errors['email'] ?>
                         </p>
                     <?php } ?>
@@ -27,7 +27,7 @@
                     <input type="password" name="password" id="password" placeholder="Azerty123!" class="w-100"
                         value="<?= @$_COOKIE['password'] ?>">
                     <?php if (isset($errors['password'])) { ?>
-                        <p class="errorsMessage">
+                        <p class="errorsMessage text-danger">
                             <?= $errors['password'] ?>
                         </p>
                     <?php } ?>
@@ -40,7 +40,7 @@
             </form>
             <!--j'ai utilisé pour séparer visuellement le formulaire de connexion des autres éléments de la page-->
             <div class="or-separator"></div>
-            <a href="/register"> <!-- le lien vers la page d'inscription-->
+            <a href="/inscription"> <!-- le lien vers la page d'inscription-->
     <button class="buttoncree"><strong>cree un compte</strong></button> <!-- un bouton avec le texte (créer un compte)-->
 </a>
         </div>

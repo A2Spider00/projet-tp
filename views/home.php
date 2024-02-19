@@ -12,6 +12,8 @@
                     <img src="assets/img/products/shoes/1/1_4.jpeg" class="card-img-top img-fluid"
                         alt="Responsive image">
                     <div class="card-body">
+                        <span class="tag"><?php echo $p->category ?></span>
+                        <span class="tag"><?php echo $p->brand ?></span>
                         <p class="card-text"><strong><i><?php echo $p->name ?></i></strong> <br>description du t-shirt </p>
                         <div class="d-flex justify-content-between align-items-center">
                             <span class="price"><?php echo $p->price ?> €</span>

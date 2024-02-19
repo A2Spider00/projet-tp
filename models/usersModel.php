@@ -20,6 +20,11 @@ class Users
     public string $password;
     public int $id_roles;
 
+
+
+
+
+
     public function __construct()
     {
         /*jai utiliser root juste pour le developement de mon projet sinon cava changer en fonction des utilisateurs*/
@@ -31,6 +36,15 @@ class Users
         }
 
     }
+
+
+
+    
+
+
+
+
+
     // checkIfExistsByEmail vérifier si email existe déja dans la BD
     // (COUNT)pour compter le nombre de fois que l'adresse e-mail apparaît dans la table
     //  j'ai utiliser (bindvalue) pour éviter les attaques par injection SQL

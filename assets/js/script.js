@@ -12,3 +12,4 @@ modalContainer.addEventListener("click", (e) => {
     }
 
 })
+

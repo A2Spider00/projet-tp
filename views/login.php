@@ -41,7 +41,7 @@
                 </div>
             </form>
             <!--j'ai utilisé pour séparer visuellement le formulaire de connexion des autres éléments de la page-->
-            <div class="or-separator mt-3 "></div>
+            <div class="or-separator mt-3 d-flex justify-content-center align-items-center">
             <a href="/inscription "> <!-- le lien vers la page d'inscription-->
                 <button class="buttoncree "><strong>cree un compte</strong></button>
                 <!-- un bouton avec le texte (créer un compte)-->

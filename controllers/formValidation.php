@@ -22,6 +22,46 @@ function checkDateValidity($date) {
     return checkdate($dateArray[1], $dateArray[2], $dateArray[0]);
 }
 
+/**
+ * Vérifie si une image est valide
+ * @param array $image - L'image à vérifier
+ * @return bool - true si l'image est valide, false sinon
+ */
+function checkImage($image) {
+    $errors['image'] = '';
+
+    if($image['error'] != 4) {
+        if($image['error'] != 1 &&  $image['size'] > 0 && $image['size'] <= 1000000) {
+            if($image['error'] == 0) {
+
+                $extensionArray = [
+                    'jpg' => 'image/jpeg', 
+                    'jpeg' => 'image/jpeg', 
+                    'png' => 'image/png', 
+                    'gif' => 'image/gif', 
+                    'webp' => 'image/webp',
+                ];
+
+                $imgExtension = pathinfo($image['name'], PATHINFO_EXTENSION);
+
+                if(!array_key_exists($imgExtension, $extensionArray) || mime_content_type($image['tmp_name']) != $extensionArray[$imgExtension]) {
+                    $errors['image'] = PRODUCT_IMAGE_ERROR_EXTENSION;
+                }
+
+            } else {
+                $errors['image'] = PRODUCT_IMAGE_ERROR;
+            }
+        } else {
+            $errors['image'] = PRODUCT_IMAGE_ERROR_SIZE;
+        }
+    } else {
+        $errors['image'] = PRODUCT_IMAGE_ERROR_EMPTY;
+    }
+
+    return $errors['image'];
+}
+
+
 
 // MESSAGES D'ERREUR
 define('USERS_firstname_ERROR_EMPTY', 'Le prenom d\'utilisateur est requis');
@@ -80,6 +120,14 @@ define('PRODUCT_NAME_ERROR_EMPTY','Le nom du produit est requise');
 define('PRODUCT_PRICE_ERROR_INVALID','Le prix du produit est invalide');
 define('PRODUCT_PRICE_ERROR_EMPTY','Le prix du produit est requise');
 
+
+//PRODUCTS IMAGES
+define('PHOTO_ADD_SUCCESS','Votre photo a été ajouté avec succès');
+define('PRODUCT_IMAGE_ERROR_EMPTY', 'L\'image est requise');
+define('PRODUCT_IMAGE_ERROR_INVALID', 'L\'image est invalide');
+define('PRODUCT_IMAGE_ERROR_EXTENSION', 'L\'image est invalide. Elle doit être au format jpg, jpeg, png, gif ou webp');
+define('PRODUCT_IMAGE_ERROR_SIZE', 'L\'image est invalide. Elle doit faire moins de 1Mo');
+define('PRODUCT_IMAGE_ERROR', 'Une erreur est survenue lors de l\'envoi de l\'image');
 // REGEX
 $regex = [
     'name' => '/^[A-zÄ-ÿ]{1,}([ \'-]{1}[A-zÄ-ÿ]{1,}){0,}$/',
@@ -89,5 +137,8 @@ $regex = [
     'content' => '/(<script>|(&lt;script&gt;))/',
     'productsName' => '/^[A-Za-z0-9 Ä-ÿ]{1,50}$/',
     'price' => '/^\$?\d+$/',
-    'productsCategorie' => '/^(chaussure|vêtements)$/'
 ];
+
+
+
+

@@ -1,21 +1,14 @@
-.bgproducts {
-    background-image: url(../img/creeproducts.jpg);
+.bgimagee {
+    background-color: gray;
     width: 100%;
-    background-size: cover;
-    height: 50rem;
-
+    height: 100%;
+    margin-top: 4rem;
 }
-
-.shadowcreate {
-    width: 25rem;
-    height: 40rem;
-    text-align: center;
-    background-color: #0e4f8d;
-    /* Couleur de fond de l'élément */
-    margin-left: 29rem;
-    margin-top: 3rem;
-    border-radius: 10px;
-    /* Facultatif : ajoutez une bordure arrondie */
-    box-shadow: 5px 5px 10px rgba(230, 224, 224, 0.3);
-    /* Position horizontale, Position verticale, Flou, Couleur de l'ombre */
+.producth2 {
+    margin-left: 4px;
+}
+@media only screen and (max-width: 768px) {
+    .producth2 {
+        margin-left: 4px;
+    }
 }

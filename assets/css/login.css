@@ -1,16 +1,24 @@
 .bgimage {
-    background-image: url(../img/products/shoes/1/2_7.jpeg);
+    background-image: url(../img/products/spiderjordan1.jpeg);
     /*lien de mon background*/
     background-size: contain;
     /*  l'image de fond est contenue dans la zone définie par l'élément*/
     background-repeat: no-repeat;
     /* l'image de fond ne doit pas se répéter */
-    height: 50rem;
+    height: 700px;
     /*  la hauteur de l'élément */
     width: 100%;
     /*  largeur de l'élément */
     background-position: center;
-    
+    margin-top: 2rem;
+}
+@media screen and (max-width: 768px) {
+    .bgimage {
+        background-image: url(../img/products/spiderjordan1.jpeg);
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+    }
 }
 
 .h11111 {

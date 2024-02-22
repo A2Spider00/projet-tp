@@ -44,6 +44,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $errors['price'] = PRODUCTS_PRICE_ERROR_EMPTY;
     }
 
+    if (!empty($_FILES['image'])) {
+        $imageMessage = checkImage($_FILES['image']);
+
+        if ($imageMessage != '') {
+            $errors['image'] = $imageMessage;
+        } else {
+            $product->image = uniqid() . '.' . pathinfo($_FILES['image']['name'], PATHINFO_EXTENSION);
+
+            while(file_exists('../assets/img/products/' . $product->image)) {
+                $product->image = uniqid() . '.' . pathinfo($_FILES['image']['name'], PATHINFO_EXTENSION);
+            }
+        }
+    }
+
+
     if (!empty($_POST['categories'])) {
         $categories->id = $_POST['categories'];
 
@@ -59,6 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $errors['categories'] = PRODUCTS_categories_ERROR_EMPTY;
     }
 
+    
 
     if (!empty($_POST['brands'])) {
         $brands->id = $_POST['brands'];
@@ -77,10 +93,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
 
-    if (empty($errors)) {
-        $product->create();
+    if(empty($errors)) {
+        if(move_uploaded_file($_FILES['image']['tmp_name'], '../assets/img/products/' . $product->image)) {
+            if($product->create()){
+                $success = PHOTO_ADD_SUCCESS;
+            } else {
+                unlink('../assets/img/products/' . $product->image);
+                $errors['add'] = PRODUCT_IMAGE_ERROR_EMPTY;
+            }
+        } else {
+            $errors['add'] = PRODUCT_IMAGE_ERROR_INVALID;
+        }
+    
     }
 }
+
+
 
 require_once '../views/parts/header.php';
 require_once '../views/createProduct.php';

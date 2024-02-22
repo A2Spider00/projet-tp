@@ -22,7 +22,7 @@ if (isset($_GET['id'])) {
     $product->id = (int) $_GET['id'];
 
     if ($product->checkIfExistsById() == 0) {
-        header('Location: /productsList');
+        header('Location: /home');
         exit;
     }
 
@@ -30,7 +30,7 @@ if (isset($_GET['id'])) {
 
 if (isset($_POST['deleteProducts'])) {
     if ($product->deleteProducts()) {
-        header('Location: /productsList');
+        header('Location: /home');
         exit;
     } else {
         echo "Erreur lors de la suppression du produit.";

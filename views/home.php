@@ -9,7 +9,7 @@
 
             <div class="col-md-4">
                 <div class="card mb-4">
-                    <img src="assets/img/products/shoes/1/1_4.jpeg" class="card-img-top img-fluid"
+                    <img src="assets/img/products/<?php echo $p->image ?>" class="card-img-top img-fluid"
                         alt="Responsive image">
                     <div class="card-body">
                         <span class="tag"><?php echo $p->category ?></span>
@@ -21,7 +21,10 @@
                             </a>
                         </div>
                     </div>
-                </div>
+                </div><?php if(isset($_SESSION['user']) && $_SESSION['user']['id_roles'] == 535) { ?>
+                    <a href="/modifier-produit-<?php echo $p->id ?>">Modifier</a>
+
+                <?php } ?>
             </div>
 <?php } ?>
         </div>

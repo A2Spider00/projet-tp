@@ -1,9 +1,13 @@
+<!-- Titre du produit -->
 <h1 class="text-white text-center"> <?php echo $productDetails->name; ?></h1>
 
+<!-- Prix du produit -->
 <p class="text-white text-center fs-3"><?php echo $productDetails->price; ?></p>
 
         <div class="container">
+            <!-- organiser le contenu en colonnes -->
             <div class="row justify-content-between">
+                <!-- Première colonne -->
                 <div class="col-6">
                     <div class="card mb-4 box-shadow">
                         <img class="card-img-top" src="assets/img/products/<?php echo $productDetails->image; ?>" alt="Card image cap">
@@ -14,6 +18,7 @@
                     <hr>
                     <label for="size" class="text-white" >Choisissez votre taille</label>
                     <select name="size" id="size" class="form-control">
+                        <!-- sélection de taille -->
                         <option value="36">36</option>
                         <option value="37">37</option>
                         <option value="38">38</option>
@@ -56,7 +61,6 @@
                 <div class="col-md-4">
                     <div class="card mb-4 box-shadow">
                         <img src="produits/krusty_simpsons.jpg" class="card-img-top img-fluid" alt="Responsive image">
-
                         <div class="card-body">
                             <div class="d-flex justify-content-end">
                                 <div class="btn-group">
@@ -69,7 +73,6 @@
                 <div class="col-md-4">
                     <div class="card mb-4 box-shadow">
                         <img src="produits/star_trek_kirk.jpg" class="card-img-top img-fluid" alt="Responsive image">
-
                         <div class="card-body">
                             <div class="d-flex justify-content-end">
                                 <div class="btn-group">
@@ -79,8 +82,6 @@
                         </div>
                     </div>
                 </div>
-
-
             </div>
         </div>
     </div>

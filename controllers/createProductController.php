@@ -14,6 +14,7 @@ if(empty($_SESSION['user']) || $_SESSION['user']['id_roles'] != 535){
 }
 // Récupération des catégories depuis la base de données
 $categories = new categories;
+//la liste des categorie stocker dans $categoriesList
 $categoriesList = $categories->getList();
 // Récupération des marques depuis la base de données
 $brands = new brands;
@@ -27,6 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $errors = [];
 // Validation du nom du produit
     if (!empty($_POST['name'])) { 
+        //$_post name envoyer par le formulaire est definie dans regex
         if (preg_match($regex['productsName'], $_POST['name'])) { // Vérification du format du nom du produit
             $product->name = strip_tags($_POST['name']); // Nettoyage et assignation du nom du produit
         } else {

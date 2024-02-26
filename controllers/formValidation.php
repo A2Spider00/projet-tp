@@ -7,9 +7,9 @@
  */
 function clean($string)
 {
-    $string = trim($string);
-    $string = strip_tags($string);
-    return $string;
+    $string = trim($string); //supprime les espaces vides en début et en fin de la chaîne de caractères
+    $string = strip_tags($string); //supprime toutes les balises html et php ,prevenir les attaques XSS Cross-Site Scripting
+    return $string; // chaîne de caractères nettoyée
 }
 
 /**

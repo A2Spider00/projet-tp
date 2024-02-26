@@ -18,7 +18,7 @@ class Products
         try {
             $this->pdo = new PDO('mysql:host=localhost;dbname=A2Spider;charset=utf8', 'root', '');
 
-        } catch (PDOException $e) {
+        } catch (PDOException $e) {    // capture PDOException et stocker dans le code
             header('location: /index.php');
         }
 
@@ -68,7 +68,7 @@ class Products
     {
         // Requête SQL pour sélectionner un produit en fonction de son identifiant
         $sql = 'SELECT id,name,price,id_categories,image FROM `H743w_products` WHERE id = :id';
-        // Préparation de la requête SQL
+        // Prépare ma reqête a l'exécution
         $req = $this->pdo->prepare($sql);
         // Liaison de la valeur de l'identifiant aux paramètres de la requête
     // Utilisation de paramètres de liaison pour éviter les injections SQL
@@ -83,7 +83,7 @@ class Products
     }
 
 
-    //verifie larticle existe dans la base
+    //verifie produit existe dans la base
     public function checkIfExistsById()
     {
         // Requête SQL pour compter le nombre d'occurrences de l'identifiant dans la table

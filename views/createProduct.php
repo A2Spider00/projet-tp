@@ -13,34 +13,36 @@
                     <div class="text-white mt-5 text-center">
                         <label for="name">NOM</label>
                         <input type="text" name="name" class="mt-5" id="name">
-                        <?php if (isset($errors['name'])) { ?> <!-- c'est pour affiche un message d'erreur si une erreur est présente dans le champ de name-->
+                        <?php if (isset($errors['name'])) { ?> <!-- c'est pour verifier une erreur est présente dans le champ de name-->
                             <p class="errorsMessage text-danger">
-                                <?= $errors['name'] ?>
+                                <?= $errors['name'] ?> <!-- afficher le message d'erreur -->
                             </p>
                         <?php } ?>
                     </div>
                     <div class="text-white mt-4 text-center">
                         <label for="price">Prix :</label>
                         <input type="number" name="price" class="mt-3" id="price">
-                        <?php if (isset($errors['price'])) { ?> <!-- c'est pour affiche un message d'erreur si une erreur est présente dans le champ de price-->
+                        <?php if (isset($errors['price'])) { ?> <!-- c'est pour verifier un message d'erreur si une erreur est présente dans le champ de price-->
                             <p class="errorsMessage text-danger">
-                                <?= $errors['price'] ?>
+                                <?= $errors['price'] ?> <!--afficher le message d'erreur -->
                             </p>
                         <?php } ?>
                     </div>
                     <div class="mt-5 text-center">
                         <input type="file" name="image" id="image">
-                        <?php if (isset($errors['image'])) { ?> <!-- c'est pour affiche un message d'erreur si une erreur est présente dans le champ de l'image-->
+                        <?php if (isset($errors['image'])) { ?> <!-- c'est pour verifier un message d'erreur si une erreur est présente dans le champ de l'image-->
                             <p class="errorsMessage text-danger">
-                                <?= $errors['image'] ?>
+                                <?= $errors['image'] ?> <!-- afficher le message d'erreur -->
                             </p>
                         <?php } ?>
                     </div>
+
+                    <!--pour getList() --> 
                     <div class="mt-4 text-center">
-                        <select name="categories" class="mt-4 center" id=""> <!-- pour sélectionner la catégorie et brands du produit -->
+                        <select name="categories" class="mt-4 center" id=""> <!-- pour sélectionner la catégorie  du produit -->
                             <?php foreach ($categoriesList as $c) { ?>
                                 <option value="<?= $c->id ?>">
-                                    <?= $c->name ?>
+                                    <?= $c->name ?> <!-- afficher le nom de la categorie-->
                                 </option>
                             <?php } ?>
                         </select>

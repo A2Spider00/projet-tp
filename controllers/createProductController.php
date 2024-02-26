@@ -99,7 +99,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if(empty($errors)) {
         if(move_uploaded_file($_FILES['image']['tmp_name'], '../assets/img/products/' . $product->image)) {
             if($product->create()){ // Si le téléchargement réussit, création du produit dans la base de données
-                $success = PHOTO_ADD_SUCCESS; // Message de succès
+                $success = PRODUCT_ADD_SUCCESS; // Message de succès
             } else {
                 unlink('../assets/img/products/' . $product->image);
                 $errors['add'] = PRODUCT_IMAGE_ERROR_EMPTY;  // Ajout d'une erreur si la création du produit échoue
@@ -110,12 +110,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     }
 
-// Création du produit si aucune erreur n'est présente
-    if (empty($errors)) {
-        if($product->create()) {  // Si aucune erreur, création du produit dans la base de données
-            $success = 'Produit a bien été créé'; // Message de succès
-        }
-    }
+
 }
 
 

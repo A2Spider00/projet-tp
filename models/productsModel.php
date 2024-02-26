@@ -11,6 +11,7 @@ class Products
     private PDO $pdo;
 
 
+    //pour avoir une connection avec la base de donner
     public function __construct()
     {
         /*Normalement, lorsqu'un utilisateur crée un mot de passe sur macOS, cela ne fonctionne pas. Quand je crée un utilisateur, il disparaît.*/
@@ -46,7 +47,7 @@ class Products
     }
 
     
-    //recupere lensemble des produits
+    //recupere lensemble des produits depuis la base de donner et les affichers
     public function getList()
     {
          // Requête SQL pour récupérer les produits avec leurs catégories et marques associées

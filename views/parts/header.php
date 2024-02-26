@@ -47,8 +47,11 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="/home">Accueil</a>
                     </li>
-
-
+                    <?php if (isset($_SESSION['user'])) { ?>
+                    <li>
+                        <a class="nav-link" href="/mon-compte">Information</a>
+                    </li>
+                    <?php } ?>
                     <?php if (isset($_SESSION['user']) && $_SESSION['user']['id_roles'] == 535) { ?>
                         <li class="nav-item">
                             <a class="nav-link" href="/creer-produit">Ajouter un produit</a>
@@ -64,13 +67,13 @@
                     </li>
                     <!-- Lien de connexion -->
                     <?php if (isset($_SESSION['user'])) { ?>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/deconnexion">Déconnexion</a>
-                            </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/deconnexion">Déconnexion</a>
+                        </li>
                     <?php } else { ?>
                         <li class="nav-item">
-                                <a class="nav-link" href="/connexion">Connexion</a>
-                            </li>
+                            <a class="nav-link" href="/connexion">Connexion</a>
+                        </li>
                     <?php } ?>
                 </ul>
             </div>

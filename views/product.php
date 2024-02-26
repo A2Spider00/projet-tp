@@ -42,12 +42,12 @@
     <div class="album py-5 bg-light">
         <div class="container">
             <div class="row">
-                <h3>Vous aimerez aussi :</h3>
+                <h3><strong>Nous vous conseillons :</strong></h3>
             </div>
             <div class="row">
                 <div class="col-md-4">
                     <div class="card mb-4 box-shadow">
-                        <img src="produits/hulk.jpg" class="card-img-top img-fluid" alt="Responsive image">
+                        <img src="assets/img/products/shoes/1/nike1.webp" class="card-img-top img-fluid" alt="Responsive image">
 
                         <div class="card-body">
                             <div class="d-flex justify-content-end">
@@ -60,7 +60,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card mb-4 box-shadow">
-                        <img src="produits/krusty_simpsons.jpg" class="card-img-top img-fluid" alt="Responsive image">
+                        <img src="assets/img/products/shoes/1/nike2.webp" class="card-img-top img-fluid" alt="Responsive image">
                         <div class="card-body">
                             <div class="d-flex justify-content-end">
                                 <div class="btn-group">
@@ -72,7 +72,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card mb-4 box-shadow">
-                        <img src="produits/star_trek_kirk.jpg" class="card-img-top img-fluid" alt="Responsive image">
+                        <img src="assets/img/products/shoes/1/nike3.webp" class="card-img-top img-fluid" alt="Responsive image">
                         <div class="card-body">
                             <div class="d-flex justify-content-end">
                                 <div class="btn-group">

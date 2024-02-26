@@ -12,7 +12,7 @@ if (!isset($_SESSION['user'])) {
     header('Location: /connexion');
     exit;
 }
- // Redirection vers la page de connexion si l'utilisateur n'est pas connecté
+ // Création d'un objet pour récupérer la liste des categorie
 $categories = new categories;
 $categoriesList = $categories->getList(); // Récupération de la liste des catégories
 

@@ -22,6 +22,7 @@
                         </div>
                     </div>
                 </div><?php if(isset($_SESSION['user']) && $_SESSION['user']['id_roles'] == 535) { ?>
+                    
                     <a href="/modifier-produit-<?php echo $p->id ?>">Modifier</a>
 
                 <?php } ?>

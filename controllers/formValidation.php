@@ -122,7 +122,7 @@ define('PRODUCT_PRICE_ERROR_EMPTY','Le prix du produit est requise');
 
 
 //PRODUCTS IMAGES
-define('PHOTO_ADD_SUCCESS','Votre photo a été ajouté avec succès');
+define('PRODUCT_ADD_SUCCESS','Votre produit a été ajouté avec succès');
 define('PRODUCT_IMAGE_ERROR_EMPTY', 'L\'image est requise');
 define('PRODUCT_IMAGE_ERROR_INVALID', 'L\'image est invalide');
 define('PRODUCT_IMAGE_ERROR_EXTENSION', 'L\'image est invalide. Elle doit être au format jpg, jpeg, png, gif ou webp');
